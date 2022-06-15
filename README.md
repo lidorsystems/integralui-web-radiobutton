@@ -59,6 +59,19 @@ import 'integralui-web-radiobutton/components/integralui.radiobutton.js';
 import 'integralui-web-radiobutton/components/integralui.radiogroup.js';
 ```
 
+Then, place the component in HTML using its tag. Here is an example:
+
+
+```bash
+<div class="sample-block" id="radiobutton-overview">
+    <iui-radiogroup id="radiogroup-1" [theme]="currentTheme" (buttonChecked)="onButtonChecked($event, 'group 1')">
+        <iui-radiobutton [checked]="true">Radio 1</iui-radiobutton>
+        <iui-radiobutton>Radio 2</iui-radiobutton>
+        <iui-radiobutton>Radio 3</iui-radiobutton>
+    </iui-radiogroup>
+</div>
+```
+
 Depending on current version of TypeScript, you may need to add some settings in tsconfig.json, under "angularCompilerOptions":
 
 ```bash"angularCompilerOptions": {
@@ -72,6 +85,7 @@ Depending on current version of TypeScript, you may need to add some settings in
 }
 ```
 
+
 ### React
 
 ```bash
@@ -81,11 +95,58 @@ import IntegralUIRadioGroupComponent from 'integralui-web-radiobutton/wrappers/r
 
 <b>Note</b>   Currently [ReactJS doesn't have full support for Web Components](https://custom-elements-everywhere.com/#react). Mainly because of the way data is passed to the component via attributes and their own synthetic event system. For this reason, you can use available wrappers located under /wrappers directory, which are ReactJS components that provide all public API from an IntegralUI component.</p>
 
+Then, place the component in HTML using its tag. Here is an example:
+
+```bash
+render() {
+    return (
+        <div className="sample-block" id="radiobutton-overview">
+            <IntegralUIRadioGroupComponent id="radiogroup-1" theme={this.state.currentTheme} buttonChecked={(e) => this.onButtonChecked(e, 'group 1')}>
+                <IntegralUIRadioButtonComponent checked={true}>Radio 1</IntegralUIRadioButtonComponent>
+                <IntegralUIRadioButtonComponent>Radio 2</IntegralUIRadioButtonComponent>
+                <IntegralUIRadioButtonComponent>Radio 3</IntegralUIRadioButtonComponent>
+            </IntegralUIRadioGroupComponent>
+        </div>
+    );
+}
+```
+
+
 ### Vanilla JavaScript
 
 ```bash
 <script type="module" src="integralui-web-radiobutton/components/integralui.radiobutton.js"></script>
 <script type="module" src="integralui-web-radiobutton/components/integralui.radiogroup.js"></script>
+```
+
+Then, place the component in HTML using its tag. Here is an example:
+
+```bash
+<div class="sample-block" id="radiobutton-overview">
+    <iui-radiogroup id="radiogroup-1" theme="Office">
+        <iui-radiobutton checked="true">Radio 1</iui-radiobutton>
+        <iui-radiobutton>Radio 2</iui-radiobutton>
+        <iui-radiobutton>Radio 3</iui-radiobutton>
+    </iui-radiogroup>
+</div>
+```
+
+## How to Change Appearance
+
+To modify the RadioButton appearance, you can use CSS custom properties:
+
+```bash
+[id="radiogroup-1"] {
+    --radio-button-margin: 20px 0 0 0;
+    --radio-button-btn-border-radius: 3px;
+    --radio-button-btn-checked-border-color: #0ba131;
+    --radio-button-btn-checked-content-background: #0ba131;
+    --radio-button-btn-content-border-radius: 3px;
+
+    --radio-button-btn-hovered-border-color: #0ba131;
+    --radio-button-btn-checked-hovered-border-color: #08bf36;
+    --radio-button-btn-checked-content-hovered-background: #08bf36;
+}
 ```
 
 ## QuickStart App
