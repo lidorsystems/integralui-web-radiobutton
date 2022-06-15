@@ -46,7 +46,7 @@ npm i integralui-web-radiobutton
 ```
 
 
-## How to Use IntegralUI RadioButton component
+## How to Use
 
 <b>Note</b> A detailed information is available here: [How to Use IntegralUI Web Components](https://www.lidorsystems.com/help/integralui/web-components/introduction/installation/). Explains how to setup and use components for each framework: Angular, React or Vanilla JavaScript.
 
