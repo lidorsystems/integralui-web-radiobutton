@@ -1,0 +1,15 @@
+/*
+  filename: integralui.radiogroup.js
+  version : 22.2.0
+  Copyright © 2016-2022 Lidor Systems. All rights reserved.
+
+  This file is part of the "IntegralUI Web" Library. 
+                                                                   
+  The contents of this file are subject to the IntegralUI Web License, and may not be used except in compliance with the License.
+  A copy of the License should have been installed in the product's root installation directory or it can be found at
+  http://www.lidorsystems.com/products/web/studio/license-agreement.aspx.
+                                                            
+  This SOFTWARE is provided "AS IS", WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License for the specific language 
+  governing rights and limitations under the License. Any infringement will be prosecuted under applicable laws.                           
+*/
+import{h as html}from"../external/lit-element.js";import IntegralUIBase from"./integralui.base.js";class IntegralUIRadioGroup extends IntegralUIBase{constructor(){super();this.b1=[];this.b2=null;this.b3=-1;this.m7()}m8(){super.m8();this.m7()}connectedCallback(){}disconnectedCallback(){}attributeChangedCallback(t,e,i){super.attributeChangedCallback(t,e,i)}static get properties(){return{selectedIndex:{type:Number,attribute:"selected-index",reflect:!0}}}get selectedIndex(){return this.b3}set selectedIndex(t){if(this.a2.isIndexInRange(t,this.b1)&&this.b3!==t){const e=this.b3;this.b3=t;this.n6(this.b1[t]);this.requestUpdate("selectedIndex",e)}}n2(t){return t&&this.b1?this.b1.indexOf(t):-1}n3(t){return t&&t.data?t.data:null}invokeCtrlEvent(t,e,i){let n=!0;if(this.a21){let s=this.n3(e);switch(t){case"CHECKED":this.m9("buttonChecked",{checked:e.checked,index:i,button:s});break;default:n=!0}}return n}invokeCtrlMethod(t,e){let i=!0;if(this.a21)switch(t){case"CHECKED":this.n6(e);break;default:i=!0}return i}n4(){let t=this;return new Promise(e=>{let i=t.b1.filter(t=>t.checked);t.b2=i.length>0?i[i.length-1]:null;t.b3=t.n2(t.b2);t.n1(t.b2);e()})}clearSelection(){this.n1()}n1(t){this.b1.forEach(function(e){if(e!==t)e.checked=!1});if(!t){this.b2=null;this.b3=-1}}n6(t){let e=this;if(t){let i=e.n2(t);e.b3=i;e.b2=t;e.n1(t);t.checked=!0;e.invokeCtrlEvent("CHECKED",t,i);return!0}return!1}firstUpdated(t){this.m14();this.updateLayout()}n5(){let t=this;return new Promise(e=>{setTimeout(function(){t._contentSlotElem=t.shadowRoot.querySelector("slot").assignedNodes();t.b1=t._contentSlotElem.filter(t=>"iui-radiobutton"===t.nodeName.toLowerCase());t.b1.forEach(e=>{e.allowAnimation=t.allowAnimation;e.colorScheme=t.a10;e.resourcePath=t.resourcePath;e.theme=t.theme;e.setParent(t)});e()},10)})}render(){return html`             <div>                 <slot @slotchange="${t=>this.n7(t)}"></slot>             </div>         `}n7(t){this.updateLayout()}async updateLayout(){await this.n5();await this.n4();this.update()}m14(){this.a18=this.shadowRoot.querySelector("div[data-ctrl=radiogroup]")}}window.customElements.define("iui-radiogroup",IntegralUIRadioGroup);export default IntegralUIRadioGroup;

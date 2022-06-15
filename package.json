@@ -1,0 +1,34 @@
+{
+  "name": "integralui-web-radiobutton",
+  "version": "22.2.0",
+  "description": "IntegralUI Web - RadioButton is a native Web Component that represents a radio button",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lidorsystems/integralui-web-radiobutton.git"
+  },
+  "keywords": [
+    "component",
+    "integralui",
+    "radiobutton",
+    "radio",
+    "ui",
+    "web",
+    "web-component",
+    "javascript",
+    "js",
+    "angular",
+    "react",
+    "reactjs",
+    "vue",
+    "vuejs"
+  ],
+  "author": "Lidor Systems",
+  "license": "SEE LICENSE in LICENSE.md",
+  "homepage": "https://github.com/lidorsystems/integralui-web-radiobutton",
+  "bugs": {
+    "url": "https://github.com/lidorsystems/integralui-web-radiobutton/issues"
+  }
+}
