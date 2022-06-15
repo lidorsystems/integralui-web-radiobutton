@@ -3,6 +3,7 @@
 IntegralUI Web - RadioButton is a native Web Component that represents a radio button. 
 
 ![IntegralUI Web - RadioButton, 22.2 - a native Web Component that represents a radio button for Angular, React and Vue](https://www.lidorsystems.com/products/web/studio/images/integralui-web-radiobutton.png)
+![IntegralUI Web Lite - TreeView 20.2 - Native Web Component](https://www.lidorsystems.com/products/web/lite/images/integralui-web-treeview-20.2.png)
 
 <b>Note</b> This component is part of [IntegralUI Web](https://github.com/lidorsystems/integralui-web.git) library.
 
@@ -52,8 +53,8 @@ In general, you need to open your application and add a reference to a component
 ### Angular
 
 ```bash
-import 'integralui-web/components/integralui.radiobutton.js';
-import 'integralui-web/components/integralui.radiogroup.js';
+import 'integralui-web-radiobutton/components/integralui.radiobutton.js';
+import 'integralui-web-radiobutton/components/integralui.radiogroup.js';
 ```
 
 Depending on current version of TypeScript, you may need to add some settings in tsconfig.json, under "angularCompilerOptions":
@@ -72,8 +73,8 @@ Depending on current version of TypeScript, you may need to add some settings in
 ### React
 
 ```bash
-import IntegralUIRadioButtonComponent from 'integralui-web/wrappers/react.integralui.radiobutton.js';
-import IntegralUIRadioGroupComponent from 'integralui-web/wrappers/react.integralui.radiogroup.js';
+import IntegralUIRadioButtonComponent from 'integralui-web-radiobutton/wrappers/react.integralui.radiobutton.js';
+import IntegralUIRadioGroupComponent from 'integralui-web-radiobutton/wrappers/react.integralui.radiogroup.js';
 ```
 
 <b>Note</b>   Currently [ReactJS doesn't have full support for Web Components](https://custom-elements-everywhere.com/#react). Mainly because of the way data is passed to the component via attributes and their own synthetic event system. For this reason, you can use available wrappers located under /wrappers directory, which are ReactJS components that provide all public API from an IntegralUI component.</p>
@@ -81,8 +82,8 @@ import IntegralUIRadioGroupComponent from 'integralui-web/wrappers/react.integra
 ### Vanilla JavaScript
 
 ```bash
-<script type="module" src="integralui-web/components/integralui.radiobutton.js"></script>
-<script type="module" src="integralui-web/components/integralui.radiogroup.js"></script>
+<script type="module" src="integralui-web-radiobutton/components/integralui.radiobutton.js"></script>
+<script type="module" src="integralui-web-radiobutton/components/integralui.radiogroup.js"></script>
 ```
 
 ## QuickStart App
