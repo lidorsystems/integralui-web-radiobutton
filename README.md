@@ -90,12 +90,12 @@ Depending on current version of TypeScript, you may need to add some settings in
 
 Currently [ReactJS doesn't have full support for Web Components](https://custom-elements-everywhere.com/#react). Mainly because of the way data is passed to the component via attributes and their own synthetic event system. For this reason, you can use available wrappers located under /wrappers directory, which are ReactJS components that provide all public API from an IntegralUI component.</p>
 
-Then, place the component in HTML using its tag. Here is an example:
-
 ```bash
 import IntegralUIRadioButtonComponent from 'integralui-web-radiobutton/wrappers/react.integralui.radiobutton.js';
 import IntegralUIRadioGroupComponent from 'integralui-web-radiobutton/wrappers/react.integralui.radiogroup.js';
 ```
+
+Then, place the component in HTML using its tag. Here is an example:
 
 ```bash
 render() {
