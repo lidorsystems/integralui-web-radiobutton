@@ -3,7 +3,6 @@
 IntegralUI Web - RadioButton is a native Web Component that represents a radio button. 
 
 ![IntegralUI Web - RadioButton, 22.2 - a native Web Component that represents a radio button for Angular, React and Vue](https://www.lidorsystems.com/products/web/studio/images/integralui-web-radiobutton.png)
-![IntegralUI Web Lite - TreeView 20.2 - Native Web Component](https://www.lidorsystems.com/products/web/lite/images/integralui-web-treeview-20.2.png)
 
 <b>Note</b> This component is part of [IntegralUI Web](https://github.com/lidorsystems/integralui-web.git) library.
 
