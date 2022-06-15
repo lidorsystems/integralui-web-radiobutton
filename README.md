@@ -74,7 +74,8 @@ Then, place the component in HTML using its tag. Here is an example:
 
 Depending on current version of TypeScript, you may need to add some settings in tsconfig.json, under "angularCompilerOptions":
 
-```bash"angularCompilerOptions": {
+```bash
+"angularCompilerOptions": {
 
     . . .
 
